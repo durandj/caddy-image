@@ -6,6 +6,10 @@ on:
     branches:
       - main
 
+env:
+  REGISTRY: ghcr.io
+  IMAGE_NAME: caddy
+
 jobs:
   Release:
     runs-on: ubuntu-latest
@@ -39,10 +43,9 @@ jobs:
           TAG_NAME="${CADDY_VERSION}-${BUILD_NUMBER}"
           git tag "${TAG_NAME}"
           git push origin "${TAG_NAME}"
-          REPOSITORY="${GITHUB_REPOSITORY#*/}"
           gh release create "$tag" \
             --repo="$GITHUB_REPOSITORY" \
-            --title="${REPOSITORY} ${TAG_NAME}" \
+            --title="${{ env.IMAGE_NAME }} ${TAG_NAME}" \
             --generate-notes
 
       - name: Log in to the container registry
