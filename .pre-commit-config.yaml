@@ -26,7 +26,7 @@ repos:
         exclude: .gitignore
       - id: no-commit-to-branch
         args:
-          - --branch main
+          - --branch=main
       - id: trailing-whitespace
         exclude: .gitignore
 

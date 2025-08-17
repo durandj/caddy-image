@@ -14,7 +14,12 @@ jobs:
       - name: Lint Dockerfile
         uses: hadolint/hadolint-action@v3.1.0
 
+      - name: Collect build information
+        run: |
+          echo XCADDY_VERSION="$(go list -m -f '{{.Version}}' github.com/caddyserver/xcaddy)" >> "${GITHUB_ENV}"
+
       - name: Build container image
         uses: docker/build-push-action@v6.18.0
         with:
           push: false
+          build-args: XCADDY_VERSION=${{ env.XCADDY_VERSION }}
