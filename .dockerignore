@@ -1,0 +1,11 @@
+/.git
+/.pre-commit-config.yaml
+/mise.toml
+
+.dockerignore
+.editorconfig
+.gitignore
+docker-compose.yml
+Dockerfile
+
+*.md

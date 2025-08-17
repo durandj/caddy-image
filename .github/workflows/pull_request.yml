@@ -1,0 +1,20 @@
+---
+name: Pull request verification
+
+on:
+  pull_request:
+
+jobs:
+  PullRequest:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository code
+        uses: actions/checkout@v4
+
+      - name: Lint Dockerfile
+        uses: hadolint/hadolint-action@v3.1.0
+
+      - name: Build container image
+        uses: docker/build-push-action@v6.18.0
+        with:
+          push: false
