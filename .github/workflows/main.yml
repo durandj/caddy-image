@@ -46,7 +46,7 @@ jobs:
           CADDY_VERSION="$(go list -m -f '{{.Version}}' github.com/caddyserver/caddy/v2)"
           MOST_RECENT_TAG="$(git describe --tags "$(git rev-list --tags --max-count=1)" 2> /dev/null || echo '0')"
           BUILD_NUMBER="$(echo "${MOST_RECENT_TAG}" | grep --perl-regexp --only-matching '\d+$')"
-          ((BUILD_NUMBER++))
+          BUILD_NUMBER="$((BUILD_NUMBER + 1))"
           TAG_NAME="${CADDY_VERSION}-${BUILD_NUMBER}"
           git tag "${TAG_NAME}"
           git push origin "${TAG_NAME}"
