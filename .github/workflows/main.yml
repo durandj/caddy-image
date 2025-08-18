@@ -40,6 +40,7 @@ jobs:
       - name: Tag new version
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          IMAGE_NAME: ${{ env.IMAGE_NAME }}
         run: |
           CADDY_VERSION="$(go list -m -f '{{.Version}}' github.com/caddyserver/caddy/v2)"
           MOST_RECENT_TAG="$(git describe --tags "$(git rev-list --tags --max-count=1)" 2> /dev/null || echo '0')"
@@ -48,9 +49,9 @@ jobs:
           TAG_NAME="${CADDY_VERSION}-${BUILD_NUMBER}"
           git tag "${TAG_NAME}"
           git push origin "${TAG_NAME}"
-          gh release create "$tag" \
+          gh release create "${TAG_NAME}" \
             --repo="$GITHUB_REPOSITORY" \
-            --title="${{ env.IMAGE_NAME }} ${TAG_NAME}" \
+            --title="${IMAGE_NAME} ${TAG_NAME}" \
             --generate-notes
 
       - name: Log in to the container registry
