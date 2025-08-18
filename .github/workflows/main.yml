@@ -42,6 +42,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           IMAGE_NAME: ${{ env.IMAGE_NAME }}
         run: |
+          set -o xtrace
           CADDY_VERSION="$(go list -m -f '{{.Version}}' github.com/caddyserver/caddy/v2)"
           MOST_RECENT_TAG="$(git describe --tags "$(git rev-list --tags --max-count=1)" 2> /dev/null || echo '0')"
           BUILD_NUMBER="$(echo "${MOST_RECENT_TAG}" | grep --perl-regexp --only-matching '\d+$')"
