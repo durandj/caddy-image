@@ -27,7 +27,7 @@ require (
 	github.com/aryann/difflib v0.0.0-20210328193216-ff5ff6dc229b // indirect
 	github.com/beorn7/perks v1.0.1 // indirect
 	github.com/caddy-dns/cloudflare v0.2.1 // indirect
-	github.com/caddyserver/caddy/v2 v2.10.1 // indirect
+	github.com/caddyserver/caddy/v2 v2.10.2 // indirect
 	github.com/caddyserver/certmagic v0.24.0 // indirect
 	github.com/caddyserver/xcaddy v0.4.5 // indirect
 	github.com/caddyserver/zerossl v0.1.3 // indirect
