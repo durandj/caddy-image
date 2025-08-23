@@ -106,6 +106,7 @@ github.com/caddy-dns/cloudflare v0.2.1/go.mod h1:xHgyMSVb+dAlGhZv4lF4EEgdJV20aMm
 github.com/caddyserver/caddy/v2 v2.10.0 h1:fonubSaQKF1YANl8TXqGcn4IbIRUDdfAkpcsfI/vX5U=
 github.com/caddyserver/caddy/v2 v2.10.0/go.mod h1:q+dgBS3xtIJJGYI2H5Nyh9+4BvhQQ9yCGmECv4Ubdjo=
 github.com/caddyserver/caddy/v2 v2.10.1/go.mod h1:TXLQHx+ev4HDpkO6PnVVHUbL6OXt6Dfe7VcIBdQnPL0=
+github.com/caddyserver/caddy/v2 v2.10.2/go.mod h1:TXLQHx+ev4HDpkO6PnVVHUbL6OXt6Dfe7VcIBdQnPL0=
 github.com/caddyserver/certmagic v0.23.0 h1:CfpZ/50jMfG4+1J/u2LV6piJq4HOfO6ppOnOf7DkFEU=
 github.com/caddyserver/certmagic v0.23.0/go.mod h1:9mEZIWqqWoI+Gf+4Trh04MOVPD0tGSxtqsxg87hAIH4=
 github.com/caddyserver/certmagic v0.24.0/go.mod h1:xPT7dC1DuHHnS2yuEQCEyks+b89sUkMENh8dJF+InLE=
