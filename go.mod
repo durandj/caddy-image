@@ -29,7 +29,7 @@ require (
 	github.com/antlr4-go/antlr/v4 v4.13.0 // indirect
 	github.com/aryann/difflib v0.0.0-20210328193216-ff5ff6dc229b // indirect
 	github.com/beorn7/perks v1.0.1 // indirect
-	github.com/caddy-dns/cloudflare v0.2.1 // indirect
+	github.com/caddy-dns/cloudflare v0.2.2 // indirect
 	github.com/caddyserver/caddy/v2 v2.10.2 // indirect
 	github.com/caddyserver/certmagic v0.24.0 // indirect
 	github.com/caddyserver/xcaddy v0.4.5 // indirect
@@ -86,7 +86,7 @@ require (
 	github.com/josephspurrier/goversioninfo v1.5.0 // indirect
 	github.com/klauspost/compress v1.18.0 // indirect
 	github.com/klauspost/cpuid/v2 v2.3.0 // indirect
-	github.com/libdns/cloudflare v0.2.1 // indirect
+	github.com/libdns/cloudflare v0.2.2 // indirect
 	github.com/libdns/libdns v1.1.0 // indirect
 	github.com/lucaslorentz/caddy-docker-proxy/v2 v2.10.0 // indirect
 	github.com/manifoldco/promptui v0.9.0 // indirect
