@@ -1,6 +1,6 @@
 # syntax=docker/dockerfile:1
 
-FROM golang:1.25.6 AS caddy_builder
+FROM golang:1.26.0 AS caddy_builder
 
 ARG XCADDY_VERSION
 
