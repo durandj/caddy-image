@@ -19,7 +19,7 @@ jobs:
           echo XCADDY_VERSION="$(go list -m -f '{{.Version}}' github.com/caddyserver/xcaddy)" >> "${GITHUB_ENV}"
 
       - name: Build container image
-        uses: docker/build-push-action@v6.18.0
+        uses: docker/build-push-action@v6.19.2
         with:
           push: false
           build-args: XCADDY_VERSION=${{ env.XCADDY_VERSION }}
