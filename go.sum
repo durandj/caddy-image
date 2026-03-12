@@ -284,6 +284,7 @@ github.com/libdns/libdns v1.1.1/go.mod h1:4Bj9+5CQiNMVGf87wjX4CY3HQJypUHRuLvlsfs
 github.com/lucaslorentz/caddy-docker-proxy/v2 v2.10.0 h1:A+l1ON49sHcB1zwZBvG3A+lgZ9eLMSg4Zkodz94ePWI=
 github.com/lucaslorentz/caddy-docker-proxy/v2 v2.10.0/go.mod h1:fTR5H/WcCdaM/YJWxT3QLfjfFXwpodHaVILlWApLqws=
 github.com/lucaslorentz/caddy-docker-proxy/v2 v2.11.0/go.mod h1:kXanAPOt/8wBWPHa9rTkQ2uxPOzocvO8aUFzE8hB2zY=
+github.com/lucaslorentz/caddy-docker-proxy/v2 v2.12.0/go.mod h1:iHuVfeCLzJSHxJvOHWycsayteqASCkslqp7LKMJs3W4=
 github.com/magiconair/properties v1.8.0/go.mod h1:PppfXfuXeibc/6YijjN8zIbojt8czPbwD3XqdrwzmxQ=
 github.com/manifoldco/promptui v0.9.0 h1:3V4HzJk1TtXW1MTZMP7mdlwbBpIinw3HztaIlYthEiA=
 github.com/manifoldco/promptui v0.9.0/go.mod h1:ka04sppxSGFAtxX0qhlYQjISsg9mR4GWtQEhdbn6Pgg=
