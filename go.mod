@@ -35,7 +35,7 @@ require (
 	github.com/caddy-dns/cloudflare v0.2.4 // indirect
 	github.com/caddyserver/caddy/v2 v2.11.3 // indirect
 	github.com/caddyserver/certmagic v0.25.3 // indirect
-	github.com/caddyserver/xcaddy v0.4.5 // indirect
+	github.com/caddyserver/xcaddy v0.4.6 // indirect
 	github.com/caddyserver/zerossl v0.1.5 // indirect
 	github.com/ccoveille/go-safecast/v2 v2.0.0 // indirect
 	github.com/cenkalti/backoff/v5 v5.0.3 // indirect
