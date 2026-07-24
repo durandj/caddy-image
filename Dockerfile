@@ -13,6 +13,7 @@ RUN set -o errexit -o xtrace \
 	&& CADDY_DOCKER_PROXY_VERSION="$(go list -m -f '{{.Version}}' github.com/lucaslorentz/caddy-docker-proxy/v2)" \
 	&& CLOUDFLARE_VERSION="$(go list -m -f '{{.Version}}' github.com/caddy-dns/cloudflare)" \
 	&& CADDY_L4_VERSION="$(go list -m -f '{{.Version}}' github.com/mholt/caddy-l4)" \
+	&& CADDY_SECURITY_VERSION="$(go list -m -f '{{.Version}}' github.com/greenpau/caddy-security)" \
 	&& go install "github.com/caddyserver/xcaddy/cmd/xcaddy@${XCADDY_VERSION}" \
 	&& CGO_ENABLED=0 GOARCH=amd64 GOOS=linux \
 		xcaddy build \
@@ -20,7 +21,8 @@ RUN set -o errexit -o xtrace \
 			--output caddy \
 			--with "github.com/lucaslorentz/caddy-docker-proxy/v2@${CADDY_DOCKER_PROXY_VERSION}" \
 			--with "github.com/caddy-dns/cloudflare@${CLOUDFLARE_VERSION}" \
-			--with "github.com/mholt/caddy-l4@${CADDY_L4_VERSION}"
+			--with "github.com/mholt/caddy-l4@${CADDY_L4_VERSION}" \
+			--with "github.com/greenpau/caddy-security@${CADDY_SECURITY_VERSION}"
 
 
 FROM debian:bullseye-slim

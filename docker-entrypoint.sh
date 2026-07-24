@@ -21,5 +21,7 @@ function load_secret_if_set() {
 }
 
 load_secret_if_set "CLOUDFLARE_API_TOKEN" "${CLOUDFLARE_API_TOKEN_FILE:-}"
+load_secret_if_set "OIDC_CLIENT_ID" "${OIDC_CLIENT_ID_FILE:-}"
+load_secret_if_set "OIDC_CLIENT_SECRET" "${OIDC_CLIENT_SECRET_FILE:-}"
 
 exec "${ENTRYPOINT}" "$@"
