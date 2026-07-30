@@ -7,8 +7,8 @@ on:
       - main
 
 env:
-  REGISTRY: ghcr.io
-  IMAGE_NAME: durandj/caddy
+  REGISTRY: ${{ secrets.GCP_ARTIFACT_REGISTRY_URL }}
+  IMAGE_NAME: caddy
 
 jobs:
   Release:
@@ -57,12 +57,21 @@ jobs:
             --generate-notes
           echo "VERSION=${TAG_NAME}" >> "${GITHUB_ENV}"
 
+      - id: gcp_auth
+        name: Authenticate with GCP
+        uses: google-github-actions/auth/v3.0.0
+        with:
+          token_format: access_token
+          project_id: ${{ secrets.GCP_PROJECT_ID }}
+          service_account: ${{ secrets.GCP_SERVICE_ACCOUNT }}
+          workload_identity_provider: ${{ secrest.GCP_IDP }}
+
       - name: Log in to the container registry
         uses: docker/login-action@v4.5.1
         with:
-          registry: ${{ env.REGISTRY }}
-          username: ${{ github.actor }}
-          password: ${{ secrets.GITHUB_TOKEN }}
+          registry: ${{ secrets.GCP_LOCATION }}-docker.pkg.dev
+          username: oauth2accesstoken
+          password: ${{ steps.gcp_auth.outputs.access_token }}
 
       - name: Extract metadata (tags, labels) for Docker
         id: meta
