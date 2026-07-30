@@ -59,7 +59,7 @@ jobs:
 
       - id: gcp_auth
         name: Authenticate with GCP
-        uses: google-github-actions/auth/v3.0.0
+        uses: google-github-actions/auth@v3.0.0
         with:
           token_format: access_token
           project_id: ${{ secrets.GCP_PROJECT_ID }}
